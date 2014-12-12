@@ -19,12 +19,12 @@ angular.module('Instagram', ['ngRoute', 'ngMessages', 'satellizer'])
       })
       .otherwise('/');
 
-    $authProvider.loginUrl = 'http://localhost:3000/auth/login';
-    $authProvider.signupUrl = 'http://localhost:3000/auth/signup';
+    $authProvider.loginUrl = 'https://ng-instagram.herokuapp.com/auth/login';
+    $authProvider.signupUrl = 'https://ng-instagram.herokuapp.com/auth/signup';
     $authProvider.oauth2({
       name: 'instagram',
-      url: 'http://localhost:3000/auth/instagram',
-      redirectUri: 'http://localhost:8000',
+      url: 'https://ng-instagram.herokuapp.com/auth/instagram',
+      redirectUri: 'https://dl.dropboxusercontent.com/u/1078988/ng-instagram/index.html',
       clientId: '3c547d3c682d4e87b31c7bf594029954',
       requiredUrlParams: ['scope'],
       scope: ['likes'],
